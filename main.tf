@@ -1,12 +1,12 @@
 provider "aws" {
-  region = "eu-west-2"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-06373f703eb245f45"
+  ami           = "ami-0e001c9271cf7f3b9"
   instance_type = "t2.micro"
-  key_name = "dockerswarm"
-  availability_zone = "eu-west-2b"
+  key_name = "virginanewaccount"
+  availability_zone = "us-east-1b"
   tags= {
     Name = "Nagesh"
   }
