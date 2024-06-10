@@ -1,7 +1,7 @@
 
 resource "aws_elb" "bar" {
   name               = "nagesh-terraform-elb"
-  availability_zones = ["eu-west-2a", "eu-west-2b"]
+  availability_zones = ["us-east-1a", "us-east-1b"]
 
   listener {
     instance_port     = 80
