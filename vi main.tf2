@@ -1,13 +1,13 @@
 provider "aws" {
-region = "eu-west-1"
+region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-01980876755d1e5ac"
+  ami             = "ami-0e001c9271cf7f3b9"
   instance_type   = "t2.micro"
-  key_name        = "dockerswarm"
+  key_name        = "virginanewaccount"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "eu-west-1a"
+  availability_zone = "us-east-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -22,11 +22,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-01980876755d1e5ac"
+  ami             = "ami-0e001c9271cf7f3b9"
   instance_type   = "t2.micro"
-  key_name        = "dockerswarm"
+  key_name        = "virginanewaccount"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "eu-west-1b"
+  availability_zone = "us-east-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
